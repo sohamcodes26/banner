@@ -44,6 +44,7 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: slideIn 1.5s ease;
     box-sizing: border-box;
+    max-width: 500px; /* Adjusted to prevent excessive width */
 }
 
 .form-container h2 {
@@ -52,15 +53,16 @@ header h1 {
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%;
+    width: calc(100% - 20px); /* Subtract padding */
     padding: 10px;
-    margin: 10px -10px;
+    margin: 10px 0; /* Adjust margin to look better */
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 button {
-    width: 100%;
+    width: calc(100% - 20px); /* Subtract padding */
     padding: 10px;
     border: none;
     background-color: #ffdd57;
@@ -68,6 +70,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 button:hover {
